@@ -4,11 +4,26 @@
 
 <h3>Links to lab instructions</h3>
 
-<p><a href="https://www.opentlc.com/labs/fuse_integration_experienced/02_1_Enrich_HTTP_Services_Lab.html">Enrich REST service Lab</a></p>
+<ol type="I">
+<li><p><a href="https://www.opentlc.com/labs/fuse_integration_experienced/02_1_Enrich_HTTP_Services_Lab.html">Enrich REST service Lab</a></p></li>
 
-<p><a href="https://www.opentlc.com/labs/3scale_onpremise_implementation/02_1_Hybrid_3Scale_Deployment_Lab.html#_configure_3scale_by_red_hat_saas">Add API integration using 3scale Lab</a></p>
+Before you begin this lab, using the git utility, clone the following repository to your $FUSE_TRAINING_HOME directory:
+<b>https://github.com/gpe-mw-training/experienced-integration-labs.git.</b>
 
-<p><a href="https://www.opentlc.com/labs/fuse_integration_services/3_Developing_Applications_for_Fuse_Integration_Services_Lab.html#_migrate_existing_fuse_karaf_application_to_fuse_integration_services_2_0">Migrate service to OCP Lab</a></p>
+
+<li><p><a href="https://www.opentlc.com/labs/3scale_onpremise_implementation/02_1_Hybrid_3Scale_Deployment_Lab.html#_configure_3scale_by_red_hat_saas">Add API integration using 3scale Lab</a></p></li>
+
+The lab above is an example of how to add API integration to your service. The specific details of this lab do not apply to the service you have created in Lab 1. You will need to adapt these instructions to your service.
+
+
+<li><p><a href="https://www.opentlc.com/labs/fuse_integration_services/3_Developing_Applications_for_Fuse_Integration_Services_Lab.html#_migrate_existing_fuse_karaf_application_to_fuse_integration_services_2_0">Migrate service to OCP Lab</a></p></li>
+
+In this lab you will deploy the REST service created in Lab 1 to OCP. Alternately, you can follow the instructions in the lab at the bottom of this section to deploy a Springboot or Karaf quickstart to OCP. 
+
+For both scenarios, make sure that you create unique project names. Define the following environment variable:OCP_PROJECT_PREFIX=abc, where abc are your initials. afterwards, a new project is created using: <b>oc new-project $OCP_PROJECT_PREFIX-fis-lab</b>
+
+<p><a href="https://github.com/redhat-gpe/fuse_architecture_workshop/blob/master/modules/03_microservices_uc/03_microservices_uc_Lab.adoc#cloud-integration-demo-using-fis-2-0">FIS 2.0 demo lab</a></p>
+</ol>
 
 </body>
 </html>
