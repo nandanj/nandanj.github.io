@@ -10,7 +10,11 @@
 Before you begin this lab, using the git utility, clone the following repository to your $FUSE_TRAINING_HOME directory:
 <b>https://github.com/gpe-mw-training/experienced-integration-labs.git.</b>
 
-The scenario you are required to implement exposes a REST service (using the REST DSL) and enriches the content by making a call to a Web Service and writes it to a DB. Ignore the sections in the instruction that pertain to a REST service invocation and service that uses CXF.
+The scenario you are required to implement exposes a REST service (using the REST DSL) and enriches the content by making a call to a Web Service and writes it to a DB. Ignore the sections in the instruction that pertain to a REST service invocation and service that uses CXF. Start fuse from your local Fuse installation and install the feature mentioned in the instructions. It is not recommended to run Camel inside Maven for this lab. Issue a curl command like:
+
+<ol type="a">
+curl -vX GET http://localhost:9191/customer/enrichCust/0
+</ol>
 
 <li><p><a href="https://www.opentlc.com/labs/3scale_onpremise_implementation/02_1_Hybrid_3Scale_Deployment_Lab.html#_configure_3scale_by_red_hat_saas">Add API integration using 3scale Lab</a></p></li>
 
