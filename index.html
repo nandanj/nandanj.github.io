@@ -17,10 +17,12 @@ The lab above is an example of how to add API integration to your service. Use t
 
 Obtain the application code. Got to the directory which is the home of your Fuse foundational course labs.
 
-% cd $FUSE_FOUNDATIONAL_LABS_HOME/examples/camel-example-restlet-jdbc
-% mvn clean install
-% mvn jetty:run
-% curl -d "firstName=Custfirstname&lastName=Custlastname" http://localhost:8080/rs/persons/
+<ol type="A">
+<li>% cd $FUSE_FOUNDATIONAL_LABS_HOME/examples/camel-example-restlet-jdbc</li>
+<li>% mvn clean install</li>
+<li>% mvn jetty:run</li>
+<li>% curl -d "firstName=Custfirstname&lastName=Custlastname" http://localhost:8080/rs/persons/</li>
+</ol>
 Expose the port using ngrok:
 
 % ngrok http 8080
