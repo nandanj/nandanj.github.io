@@ -13,8 +13,23 @@ Before you begin this lab, using the git utility, clone the following repository
 
 <li><p><a href="https://www.opentlc.com/labs/3scale_onpremise_implementation/02_1_Hybrid_3Scale_Deployment_Lab.html#_configure_3scale_by_red_hat_saas">Add API integration using 3scale Lab</a></p></li>
 
-The lab above is an example of how to add API integration to your service. The specific details of this lab do not apply to the service you have created in Lab 1. You will need to adapt these instructions to your service.
+The lab above is an example of how to add API integration to your service. Use the instructions below to set-up the example instead of the services referenced in the lab.
 
+Obtain the application code. Got to the directory which is the home of your Fuse foundational course labs.
+
+% cd $FUSE_FOUNDATIONAL_LABS_HOME/examples/camel-example-restlet-jdbc
+% mvn clean install
+% mvn jetty:run
+% curl -d "firstName=Custfirstname&lastName=Custlastname" http://localhost:8080/rs/persons/
+Expose the port using ngrok:
+
+% ngrok http 8080
+
+Before starting the lab, please set the following environment variables:
+
+$ echo 'export GUID=<your lab environment GUID as provided in the confirmation email>' >> ~/.bashrc
+$ echo 'export OCP_WILDCARD_DOMAIN=apps.$GUID.openshift.opentlc.com' >> ~/.bashrc
+$ echo 'export OCP_USER_ID=<your OCP USER ID>' >> ~/.bashrc
 
 <li><p><a href="https://www.opentlc.com/labs/fuse_integration_services/3_Developing_Applications_for_Fuse_Integration_Services_Lab.html#_migrate_existing_fuse_karaf_application_to_fuse_integration_services_2_0">Migrate service to OCP Lab</a></p></li>
 
