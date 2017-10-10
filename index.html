@@ -13,17 +13,15 @@ Before you begin this lab, using the git utility, clone the following repository
 The scenario you are required to implement exposes a REST service (using the REST DSL) and enriches the content by making a call to a Web Service and writes it to a DB. Ignore the sections in the instruction that pertain to a REST service invocation and service that uses CXF. Start fuse from your local Fuse installation and install the feature mentioned in the instructions. It is not recommended to run Camel inside Maven for this lab. Issue a curl command like:
 
 <ol type="a">
-curl -vX GET http://localhost:9191/customer/enrichCust/0
+<li>curl -vX GET http://localhost:9191/customer/enrichCust/0</li>
 </ol>
 
 <li><p><a href="https://www.opentlc.com/labs/3scale_onpremise_implementation/02_1_Hybrid_3Scale_Deployment_Lab.html#_configure_3scale_by_red_hat_saas">Add API integration using 3scale Lab</a></p></li>
 
-The lab above is an example of how to add API integration to your service. Use the instructions below to set-up the example instead of the services referenced in the lab.
-
-Obtain the application code. Got to the directory which is the home of your Fuse foundational course labs.
+The lab above is an example of how to add API integration to your service. Use the instructions below to set-up the example instead of the services referenced in the lab. You will be using a Camel example from the community distribution. This has been tested against Camel 2.18
 
 <ol type="a">
-<li>% cd $FUSE_FOUNDATIONAL_LABS_HOME/examples/camel-example-restlet-jdbc</li>
+<li>% cd $CAMEL_HOME/examples/camel-example-restlet-jdbc</li>
 <li>% mvn clean install</li>
 <li>% mvn jetty:run</li>
 <li>% curl -d "firstName=Custfirstname&lastName=Custlastname" http://localhost:8080/rs/persons/</li>
